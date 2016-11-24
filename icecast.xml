@@ -1,0 +1,46 @@
+<xml version="1.0"/>
+<ices>
+<!– run in background –>
+<background>1</background>
+<!– where logs, etc go. –>
+<logpath>/var/log/ices</logpath>
+<logfile>ices.log</logfile>
+<!– 1=error,2=warn,3=info,4=debug –>
+<loglevel>1</loglevel>
+<!– set this to 1 to log to the console instead of to the file above –>
+<consolelog>0</consolelog>
+
+<stream>
+<!– metadata used for stream listing (not currently used) –>
+<metadata>
+<name>SuperCollider on BBB</name>
+<genre>Electroacoustic</genre>
+<description>SuperCollider</description>
+</metadata>
+
+<input>
+<module>alsa</module>
+<param name=”rate”>48000</param>
+<param name=”channels”>2</param>
+<param name=”device”>plughw:CARD=USBaudio</param> (use ‘aplay -L’ to get a sound-card device)
+<param name=”metadata”>1</param>
+<param name=”metadatafilename”>/etc/ices2/metadata</param>
+</input>
+
+<instance>
+<hostname>localhost</hostname>
+<port>8000</port>
+<password>hackme</password>
+<mount>/demo.ogg</mount>
+<reconnectdelay>2</reconnectdelay>
+<reconnectattempts>5</reconnectattempts>
+<maxqueuelength>80</maxqueuelength>
+<encode>
+<nominal-bitrate>112000</nominal-bitrate> <!– bps. e.g. 64000 for 64 kbps –>
+<samplerate>48000</samplerate>
+<channels>2</channels>
+</encode>
+</instance>
+
+</stream>
+</ices>
