@@ -1,2 +1,0 @@
-sudo icecast -c icecast.xml
-darkice -c darkice.cfg
