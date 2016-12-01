@@ -9,21 +9,12 @@
   function scapiStart() {
     // hold these so you can unlisten
     scapi = new SCAPI('localhost', 57120);
-    // var scapi = new SCAPI('192.168.1.37', 57110);
     scapi.connect();
 
-    // var cmds = ['server.quit', {
-    //   cmd: 'server.boot',
-    //   args: ['default']
-    // }, 'trucouf.explosionFatale'];
-
-    scapi.call(undefined, 'server.quit', []).then(function(r1) {
-      console.log('server quit ok ', r1);
-      scapi.call(undefined, 'server.boot', ['default']).then(function(r2) {
-        console.log('server boot ok ', r2);
-        // scapi.call(undefined, 'trucouf.explosionFatale', []).then(function(response) {
-        //   console.log('response', response);
-        // });
+    scapi.call(undefined, 'server.boot', []).then(function(r1) {
+      console.log('server boot ok ', r1);
+      scapi.call(undefined, 'trucouf.stop', []).then(function(r2) {
+        console.log('trucouf stop ok ', r2);
       });
     });
   }

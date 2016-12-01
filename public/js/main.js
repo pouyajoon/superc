@@ -1,7 +1,6 @@
 (function() {
   'use strict';
-  /*global io, angular, google, moment*/
-
+  /*global io, angular*/
 
   var app, socket;
   app = angular.module('myApp', []);
@@ -71,10 +70,6 @@
 
     socket.on('connect', function() {
       console.log('connected');
-      // $on('game-state', function(gameState) {
-      //   console.log('gameState', gameState);
-
-      // });
     });
 
 
