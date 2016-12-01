@@ -16,10 +16,15 @@
     <div ng-controller="MainController">
       <h4>Controls</h4>
       <ul>
+        <li><a ng-click="scapi('server.boot')">server.boot</a></li>
+        <li><a ng-click="scapi('server.quit')">server.quit</a></li>
         <li><a ng-click="scapi('trucouf.explosionFatale')">explosionFatale</a></li>
         <li><a ng-click="scapi('trucouf.stop')">stop</a></li>
         <li><a ng-click="scapi('trucouf.go')">go</a></li>
-        <li><a ng-click="scapi('trucouf.up', [5])">up 5</a></li>
+        <li>
+          <a ng-click="scapi('trucouf.up', [conf.up])">up {{conf.up}}</a>
+          <input type="range" ng-model="conf.up" ng-change="updateConf()"/>
+        </li>
         <li><a ng-click="scapi('server.freeAll')">free All</a></li>
       </ul>
       <hr>

@@ -12,9 +12,27 @@
     log: true
   });
 
+
+  function getConf() {
+    var conf = {
+      up: 5
+    };
+    if (localStorage.conf) {
+      conf = JSON.parse(localStorage.conf);
+    }
+    return conf;
+  }
+
   app.controller('MainController', function($scope) {
     var $on, $emit;
     $scope.logs = [];
+    $scope.conf = getConf();
+
+
+    $scope.updateConf = function(){
+      localStorage.conf = JSON.stringify($scope.conf);
+    };
+
 
     $on = function(key, callback) {
       socket.on(key, function(res) {
