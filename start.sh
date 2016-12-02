@@ -35,9 +35,9 @@ sleep 1
 nodemon &
 
 ## stream with listening with vlc
-sleep 1
+sleep 2
 vlc http://localhost:8001/test 
 
-# on y retourne parce qu'on est des oufs
-sh ../kill.sh
+# on y retourne dans le killage parce qu'on est des oufs
+./kill.sh
 

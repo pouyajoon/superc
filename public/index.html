@@ -24,10 +24,8 @@
           <a ng-click="scapi('trucouf.up', [conf.up])">up {{conf.up}}</a>
           <input type="range" ng-model="conf.up" ng-change="updateConf()"/>
         </li>
-        <li><a ng-click="scapi('server.freeAll')">free All</a></li>
       </ul>
-      <hr>
-      <audio src="http://localhost:8001/test" autoplay></audio>
+      <!-- <audio controls src="http://localhost:8001/test" autoplay></audio> -->
       <h4>Logs</h4>
       <ul><li ng-repeat="l in logs">{{l}}</li></ul>
     </div>

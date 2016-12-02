@@ -30,6 +30,7 @@
     <alias source="/" destination="/status.xsl"/>
   </paths>
   <burst-on-connect>0</burst-on-connect>
+  <burst-size>0</burst-size>
   <logging>
     <accesslog>access.log</accesslog>
     <errorlog>error.log</errorlog>

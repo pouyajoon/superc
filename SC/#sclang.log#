@@ -13,7 +13,7 @@ initPassOne done
 	method table size 18181976 bytes, big table size 149200128
 	Number of Symbols 15787
 	Byte Code Size 582036
-	compiled 583 files in 1.03 seconds
+	compiled 583 files in 1.23 seconds
 
 Info: 42 methods are currently overwritten by extensions. To see which, execute:
 MethodOverride.printAll
@@ -57,78 +57,3 @@ RESULT = 0
 JackDriver: max output latency 0.0 ms
 RESULT = 0
 RESULT = 0
-ERROR: Variable 'repl' not defined.
-  in file 'selected text'
-  line 8 char 17:
-
-  go:{arg rep; repl.(Pbindef(\a, \degree, 10/Pdefn(\up)).play)},
-                   
-  up:{arg reply, val; Pdefn(\up,val)}
------------------------------------
-ERROR: Message 'keysValuesDo' not understood.
-RECEIVER:
-   nil
-ARGS:
-Instance of Function {    (0x55b2e58, gc=64, fmt=00, flg=00, set=02)
-  instance variables [2]
-    def : instance of FunctionDef in Method Dictionary:putAll
-    context : Frame (0x2ba6828) of Function
-}
-
-PROTECTED CALL STACK:
-	Meta_MethodError:new	0x31bac00
-		arg this = DoesNotUnderstandError
-		arg what = nil
-		arg receiver = nil
-	Meta_DoesNotUnderstandError:new	0x31bcbc0
-		arg this = DoesNotUnderstandError
-		arg receiver = nil
-		arg selector = keysValuesDo
-		arg args = [ a Function ]
-	Object:doesNotUnderstand	0x2bc7240
-		arg this = nil
-		arg selector = keysValuesDo
-		arg args = nil
-	ArrayedCollection:do	0x3d2eb00
-		arg this = [ nil ]
-		arg function = a Function
-		var i = 0
-	Dictionary:putAll	0x3e61fc0
-		arg this = Dictionary[  ]
-		arg dictionaries = nil
-	API:addAll	0x38ba380
-		arg this = API('trucouf')
-		arg dict = nil
-	Meta_API:load	0x38b9440
-		arg this = API
-		arg name = trucouf
-	a FunctionDef	0x38c7e80
-		sourceCode = "<an open Function>"
-	Function:prTry	0x343da00
-		arg this = a Function
-		var result = nil
-		var thread = a Thread
-		var next = nil
-		var wasInProtectedFunc = false
-	
-CALL STACK:
-	DoesNotUnderstandError:reportError   0x4d5afc8
-		arg this = <instance of DoesNotUnderstandError>
-	< FunctionDef in Method Meta_API:mountDuplexOSC >   0x4d70e28
-		arg args = [*0]
-	OSCMessageDispatcher:value   0x4dd6bb8
-		arg this = <instance of OSCMessageDispatcher>
-		arg msg = [*4]
-		arg time = 9.563036801
-		arg addr = <instance of NetAddr>
-		arg recvPort = 57120
-	Main:recvOSCmessage   0x4dafd78
-		arg this = <instance of Main>
-		arg time = 9.563036801
-		arg replyAddr = <instance of NetAddr>
-		arg recvPort = 57120
-		arg msg = [*4]
-^^ The preceding error dump is for ERROR: Message 'keysValuesDo' not understood.
-eRECEIVER: nil
-
-
