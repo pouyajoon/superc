@@ -10,13 +10,12 @@
     // hold these so you can unlisten
     scapi = new SCAPI('localhost', 57120);
     scapi.connect();
-
-    scapi.call(undefined, 'server.boot', []).then(function(r1) {
-      console.log('server boot ok ', r1);
-      scapi.call(undefined, 'trucouf.stop', []).then(function(r2) {
-        console.log('trucouf stop ok ', r2);
-      });
-    });
+    // scapi.call(undefined, 'server.boot', []).then(function(r1) {
+    //   console.log('server boot ok ', r1);
+    //   scapi.call(undefined, 'trucouf.stop', []).then(function(r2) {
+    //     console.log('trucouf stop ok ', r2);
+    //   });
+    // });
   }
   scapiStart();
 

@@ -1,0 +1,5 @@
+# includePaths:
+#     - /home/simdax/.local/share/SuperCollider/downloaded-quarks/JACK
+excludePaths:
+    - /home/simdax/.local/share/SuperCollider/Extensions/axe/lib/ext
+postInlineWarnings: false

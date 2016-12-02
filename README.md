@@ -1,1 +1,3 @@
 # superc
+
+C'est superCool

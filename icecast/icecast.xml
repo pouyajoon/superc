@@ -13,13 +13,13 @@
     <admin-user>admin</admin-user>
     <admin-password>hackme</admin-password>
   </authentication>
-  <directory>
-    <yp-url-timeout>15</yp-url-timeout>
-    <yp-url>http://dir.xiph.org/cgi-bin/yp-cgi</yp-url>
-  </directory>
-  <hostname>simdax.ddns.net</hostname>
+  <!-- <directory> -->
+  <!--   <yp-url-timeout>15</yp-url-timeout> -->
+  <!--   <yp-url>http://dir.xiph.org/cgi-bin/yp-cgi</yp-url> -->
+  <!-- </directory> -->
+  <hostname>localhost</hostname>
   <listen-socket>
-    <port>8000</port>
+    <port>8001</port>
     <!-- <port>8001</port> -->
   </listen-socket>
   <fileserve>1</fileserve>
@@ -29,6 +29,7 @@
     <adminroot>/usr/share/icecast/admin</adminroot>
     <alias source="/" destination="/status.xsl"/>
   </paths>
+  <burst-on-connect>0</burst-on-connect>
   <logging>
     <accesslog>access.log</accesslog>
     <errorlog>error.log</errorlog>

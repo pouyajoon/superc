@@ -2,8 +2,8 @@
 <html>
   <head>
     <title>SuperC</title>
-    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
-    <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css"> -->
+    <!-- <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script> -->
     <script src="/socket.io/socket.io.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
     <link rel="stylesheet/less" type="text/css" href="css/main.less" />
@@ -14,13 +14,12 @@
   <body ng-app="myApp">
     Super Collider
     <div ng-controller="MainController">
+      <h1>
       <h4>Controls</h4>
       <ul>
-        <li><a ng-click="scapi('server.boot')">server.boot</a></li>
-        <li><a ng-click="scapi('server.quit')">server.quit</a></li>
-        <li><a ng-click="scapi('trucouf.explosionFatale')">explosionFatale</a></li>
-        <li><a ng-click="scapi('trucouf.stop')">stop</a></li>
-        <li><a ng-click="scapi('trucouf.go')">go</a></li>
+        <li><a ng-click="tf('explosionFatale')">explosionFatale</a></li>
+        <li><a ng-click="tf('stop')">stop</a></li>
+        <li><a ng-click="tf('go')">go</a></li>
         <li>
           <a ng-click="scapi('trucouf.up', [conf.up])">up {{conf.up}}</a>
           <input type="range" ng-model="conf.up" ng-change="updateConf()"/>
@@ -28,6 +27,7 @@
         <li><a ng-click="scapi('server.freeAll')">free All</a></li>
       </ul>
       <hr>
+      <audio src="http://localhost:8001/test" autoplay></audio>
       <h4>Logs</h4>
       <ul><li ng-repeat="l in logs">{{l}}</li></ul>
     </div>

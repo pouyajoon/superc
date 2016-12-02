@@ -10,13 +10,34 @@
 # qjackctl&
 
 
+
 ## balance le servure
+cd icecast
 clear
 echo mot de passe pour ta mere : 
 read -s password
-clear
+
+# tue tout
+sh ../kill.sh
+
 echo $password | sudo -S icecast -c icecast.xml &
+clear
 sleep 1
 ./darkice/darkice -c darkice.cfg&
 sleep 1
-sclang server.scd
+
+cd ../SC
+./startSC.sh &
+
+## launch internet
+cd ..
+sleep 1
+nodemon &
+
+## stream with listening with vlc
+sleep 1
+vlc http://localhost:8001/test 
+
+# on y retourne parce qu'on est des oufs
+sh ../kill.sh
+
