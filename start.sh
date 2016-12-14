@@ -27,6 +27,7 @@ sleep 1
 sleep 1
 
 cd ../SC
+#sclang -D -u 57120 -l SC/conf.yaml server.scd  &
 ./startSC.sh &
 
 ## launch internet
