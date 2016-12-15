@@ -1,4 +1,8 @@
 (
+test:{arg reply;
+	"dinguouououou".postln;
+	reply.("vazi ma groooosse !")
+},
 explosionFatale:{ arg reply;
 	Pdef(\a, Pbind(\dur, 0.2, \degree, Pwhite())).play;
 	reply.("gogo")

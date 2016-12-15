@@ -12,7 +12,7 @@
 
 
 ## balance le servure
-cd icecast
+
 clear
 echo mot de passe pour ta mere : 
 read -s password

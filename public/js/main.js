@@ -1,6 +1,5 @@
 (function() {
     'use strict';
-    /*global io, angular*/
 
     var app, socket;
     app = angular.module('myApp', []);
@@ -26,7 +25,6 @@
 	var $on, $emit;
 	$scope.logs = [];
 	$scope.conf = getConf();
-	$scope.simon="io mac";
 
 	$scope.updateConf = function(){
 	    localStorage.conf = JSON.stringify($scope.conf);
@@ -69,3 +67,6 @@
 
 
 }());
+
+
+
